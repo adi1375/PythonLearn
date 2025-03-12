@@ -5,3 +5,6 @@ def steps(n):
         return 1
     else:
         return steps(n - 3) + steps(n - 2) + steps(n - 1)
+
+
+print(steps(3))

@@ -1,0 +1,3 @@
+Day 13 was all about debugging. I learned different debugging techniques
+and applied the same on sample tests to correct the program and find out
+the correct output.
