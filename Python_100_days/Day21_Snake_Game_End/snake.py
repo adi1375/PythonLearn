@@ -52,3 +52,10 @@ class Snake:
     
     def extend_body(self):
         self.create_part(self.snake_body[-1].position())
+        
+    def reset_snake(self):
+        for part in self.snake_body:
+            part.goto(1000,1000)
+        self.snake_body.clear()
+        self.create_snake()
+        self.head = self.snake_body[0]

@@ -29,18 +29,21 @@ while not game_over:
     time.sleep(0.1)
     snake.move()
     
+    # eat food, increase score
     if snake.head.distance(food) < 15:
         food.respawn()
         snake.extend_body()
         scoreboard.increase_score()
 
+    # wall collision
     if snake.head.xcor() > 380 or snake.head.xcor() < -380 or snake.head.ycor() > 380 or snake.head.ycor() < -380:
-        game_over = True
-        scoreboard.game_over()
-        
+        scoreboard.reset_score()
+        snake.reset_snake()
+    
+    # tail collision
     for part in snake.snake_body[1:]:
         if snake.head.distance(part) < 10:
-            game_over = True
-            scoreboard.game_over()
-        
+            scoreboard.reset_score()
+            snake.reest_snake()
+            
 screen.exitonclick()
