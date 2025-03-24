@@ -15,8 +15,7 @@ Python, Tkinter, Turtle, Matplotlib, Plotly, Seaborn, Pandas, Numpy, SciPy, Scik
 
 
 ## Python_100_days:
-Using standard libray:
-1. Day 1 Band Name Generator
+1. Band Name Generator
 2. Tip Calculator
 3. Treasure Island
 4. Rock Papaer Scissor
@@ -32,26 +31,18 @@ Using standard libray:
 14. Coffee Machine
 15. Coffee Machine using OOP
 16. The Quiz Project
-
-Using GUI libraries:
 17. Hirst Painting
 18. Turtle Race
 19. Snake Game
 20. Pong Game
 21. Turtle Crossing Game
-
-Working with Files:
 22. Mail Merge
-
-Using Pandas and working with csv fils:
 23. Country State Guessing game
 24. NATO Alphabet
 25. Mile to Kilometer Converter
 26. Pomodoro App
 27. Password Manager
 28. Flashcard Leearning Tool
-
-Data Visualization using Jupyter, Pandas, Numpy, Matplot, Seaborn etc.:
 29. Analysis of Salaries of different College Majors
 30. Programming Language Data Analysis
 31. LEGO Products Analysis
