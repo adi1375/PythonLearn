@@ -53,9 +53,9 @@ Using Pandas and working with csv fils:
 
 Data Visualization using Jupyter, Pandas, Numpy, Matplot, Seaborn etc.:
 29. Analysis of Salaries of different College Majors
-29. Programming Language Data Analysis
-30. LEGO Products Analysis
-31. Google Trends Visualization
-32. Google Play Store analysis
-33. Movie Production and Revenue Analysis
-34. Nobel Prize Analysis
+30. Programming Language Data Analysis
+31. LEGO Products Analysis
+32. Google Trends Visualization
+33. Google Play Store analysis
+34. Movie Production and Revenue Analysis
+35. Nobel Prize Analysis
