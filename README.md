@@ -16,7 +16,7 @@ Python, Tkinter, Turtle, Matplotlib, Plotly, Seaborn, Pandas, Numpy, SciPy, Scik
 
 ## Python_100_days:
 Using standard libray:
-1. Day 1 Band Name Generator
+1. Band Name Generator
 2. Tip Calculator
 3. Treasure Island
 4. Rock Papaer Scissor
