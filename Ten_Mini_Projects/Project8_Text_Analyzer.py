@@ -1,4 +1,8 @@
 from collections import Counter
+import os
+
+def cls() -> None:
+    os.system('cls' if os.name=="nt" else 'clear')
 
 def open_file(path: str) -> str:
     with open(path, 'r') as file:
@@ -21,6 +25,7 @@ def analyze(text: str) -> dict[str, int]:
 
 
 def main() -> None:
+    cls()
     # print(open_file(r"Ten_Mini_Projects\Project7_note.txt"))
     text: str = open_file(r"Ten_Mini_Projects\Project7_note.txt")
     analysis: dict[str, int] = analyze(text)
