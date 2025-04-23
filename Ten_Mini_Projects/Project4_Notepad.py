@@ -15,6 +15,10 @@ class SimpleNotepad:
         self.button_frame: Frame = Frame(self.root)
         self.button_frame.pack()
         
+        # New button
+        self.save_button: Button = Button(self.button_frame, text='New',command=self.new_file)
+        self.save_button.pack(side=tk.LEFT)
+        
         # Save button
         self.save_button: Button = Button(self.button_frame, text='Save',command=self.save_file)
         self.save_button.pack(side=tk.LEFT)
@@ -23,13 +27,26 @@ class SimpleNotepad:
         self.load_button: Button = Button(self.button_frame, text='Load',command=self.load_file)
         self.load_button.pack(side=tk.RIGHT)
         
+        # For storing file path and accessing it
+        self.current_file = None
+        
+        # Start notepad with a new file
+        self.new_file()
+        
     def save_file(self) -> None:
-        file_path: str = filedialog.asksaveasfilename(defaultextension='.txt',
+        if not self.current_file:
+            file_path: str = filedialog.asksaveasfilename(defaultextension='.txt',
                                                       filetypes=[('Text files','*.txt')])
-        with open(file_path, 'w') as file:
-            file.write(self.text_area.get(1.0, tk.END))
-            
-        print(f'File was save to: {file_path}')
+            self.current_file = file_path
+        
+        try:
+            with open(self.current_file, 'w') as file:
+                file.write(self.text_area.get(1.0,tk.END))
+        except Exception as e:
+            print(e)
+            return
+                        
+        print(f'File was saved to: {self.current_file}')
     
     def load_file(self) -> None:
         file_path: str = filedialog.askopenfilename(defaultextension='.txt',
@@ -38,9 +55,15 @@ class SimpleNotepad:
             content: str = file.read()
             self.text_area.delete(1.0, tk.END)
             self.text_area.insert(tk.INSERT, content)
-            
+            self.current_file = file_path
+            self.root.title(f"My Notepad - {file_path}")
         print(f'File loaded from: {file_path}')
-    
+        
+    def new_file(self) -> None:
+        self.text_area.delete(1.0,tk.END)
+        self.current_file = None
+        self.root.title(f"My Notepad - Untitled")
+        
     def run(self) -> None:
         self.root.mainloop()
         
