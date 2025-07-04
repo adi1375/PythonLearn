@@ -62,7 +62,7 @@ window.config(padx=100,pady=50,bg=YELLOW)
 
 
 canvas = Canvas(width=200,height=224,bg=YELLOW,highlightthickness=0)
-tomato=PhotoImage(file="Python_100_days/Day28_Pomodoro_App/tomato.png")
+tomato=PhotoImage(file="Python_100_days/Day_28_Pomodoro_App/tomato.png")
 canvas.create_image(100,112,image=tomato)
 timer_text = canvas.create_text(102,130, text="00:00",fill="white",font=(FONT_NAME,40,"bold"))
 canvas.grid(row=1,column=1)

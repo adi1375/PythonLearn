@@ -64,7 +64,7 @@ symbols_list = ["!", "#", "$", "%", "(", ")", "*", "+"]
 def find_password():
     website_search = entry_website.get()
     try:
-        with open("Python_100_days/Day30_Errors_Exceptions_JSON/password_file.json",mode="r") as data_file:
+        with open("Python_100_days/Day_30_Errors_Exceptions_JSON/password_file.json",mode="r") as data_file:
             stored_data = json.load(data_file)
             
     except FileNotFoundError:
@@ -121,18 +121,18 @@ def save_data():
         messagebox.showwarning(title="Warning!", message="Empty Data Fields!\nPlease fill the necessary fields.")
     else:
         try:    
-            with open("Python_100_days/Day30_Errors_Exceptions_JSON/password_file.json",mode="r") as data_file:
+            with open("Python_100_days/Day_30_Errors_Exceptions_JSON/password_file.json",mode="r") as data_file:
                 # Reading the data
                 data = json.load(data_file)
                 # Updatinng the data
                 data.update(new_data)
                 
         except FileNotFoundError:
-            with open("Python_100_days/Day30_Errors_Exceptions_JSON/password_file.json",mode="w") as data_file:
+            with open("Python_100_days/Day_30_Errors_Exceptions_JSON/password_file.json",mode="w") as data_file:
                 json.dump(new_data,data_file,indent=4)
         
         else:        
-            with open("Python_100_days/Day30_Errors_Exceptions_JSON/password_file.json",mode="w") as data_file:
+            with open("Python_100_days/Day_30_Errors_Exceptions_JSON/password_file.json",mode="w") as data_file:
                 # Saving the updated data
                 json.dump(data,data_file,indent=4)
         
@@ -150,7 +150,7 @@ window.config(padx=50,pady=50)
 
 # image
 canvas = Canvas(width=200,height=200)
-lock = PhotoImage(file="Python_100_days/Day29_Password_Manager/logo.png")
+lock = PhotoImage(file="Python_100_days/Day_29_Password_Manager/logo.png")
 canvas.create_image(100,100, image=lock)
 canvas.grid(row=0,column=1)
 

@@ -14,7 +14,7 @@
 
 import pandas
 
-data = pandas.read_csv("Python_100_days/Day25_Country_State_Guessing_Game/weather_data.csv")
+data = pandas.read_csv("Python_100_days/Day_25_Country_State_Guessing_Game/weather_data.csv")
 # print(type(data))
 # print(type(data["temp"]))
 

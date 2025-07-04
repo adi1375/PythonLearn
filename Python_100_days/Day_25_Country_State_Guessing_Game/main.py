@@ -3,14 +3,14 @@ import pandas
 
 screen = turtle.Screen()
 screen.title("State Guessing Game")
-image = "Python_100_days/Day25_Country_State_Guessing_Game/blank_states_img.gif"
+image = "Python_100_days/Day_25_Country_State_Guessing_Game/blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
 states_guessed_correctly = 0
 guessed_sates = []
 not_guessed_states = []
 total_states = 50
-state_data = pandas.read_csv("Python_100_days/Day25_Country_State_Guessing_Game/50_states.csv")
+state_data = pandas.read_csv("Python_100_days/Day_25_Country_State_Guessing_Game/50_states.csv")
 all_states = state_data.state.to_list()
 
 while states_guessed_correctly!= 50:
@@ -32,7 +32,7 @@ while states_guessed_correctly!= 50:
     if answer_state == "Exit":
         not_guessed_states = [state for state in all_states if state not in guessed_sates]
         df = pandas.DataFrame(not_guessed_states)
-        df.to_csv("Python_100_days/Day25_Country_State_Guessing_Game/state_not_guessed.csv")
+        df.to_csv("Python_100_days/Day_25_Country_State_Guessing_Game/state_not_guessed.csv")
         break
 
 screen.exitonclick()

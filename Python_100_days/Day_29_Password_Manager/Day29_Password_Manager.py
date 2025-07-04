@@ -97,7 +97,7 @@ def save_data():
         is_ok =messagebox.askokcancel(title=f"{website}",message=f"These are the details entered: \nEmail: {email} \nPassword: {password} Is it ok to save?")
     
         if is_ok:
-            with open("Python_100_days/Day29_Password_Manager/password.txt",mode="a") as file:
+            with open("Python_100_days/Day_29_Password_Manager/password.txt",mode="a") as file:
                file.write(f"{website} | {email} | {password}\n")
                entry_website.delete(0,END)
                entry_email.delete(0,END)
@@ -112,7 +112,7 @@ window.config(padx=50,pady=50)
 
 # image
 canvas = Canvas(width=200,height=200)
-lock = PhotoImage(file="Python_100_days/Day29_Password_Manager/logo.png")
+lock = PhotoImage(file="Python_100_days/Day_29_Password_Manager/logo.png")
 canvas.create_image(100,100, image=lock)
 canvas.grid(row=0,column=1)
 
